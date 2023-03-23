@@ -1,4 +1,4 @@
-# revealjs-fdc
+# Climate Fresk Cards
 
 ## Project setup
 
