@@ -5,11 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "export": "decktape http://localhost:8080 output.pdf -s '960x700' --slides 1-4"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "decktape": "^3.7.0",
+    "reveal.js": "^4.4.0",
+    "vue": "^3.2.13",
+    "vue-i18n": "^9.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
