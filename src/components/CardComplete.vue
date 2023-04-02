@@ -1,17 +1,8 @@
-<!-- Card.vue -->
 <template>
-  <CardRecto
-    :background-image="backgroundImage"
-    :title="title"
-    :card-number="cardNumber"
-  >
+  <CardRecto :background-image="backgroundImage" :title="title" :card-number="cardNumber">
     <slot></slot>
   </CardRecto>
-  <CardVerso
-    :content="content"
-    :card-number="cardNumber"
-    :lot-number="lotNumber"
-  />
+  <CardVerso :content="content" :card-number="cardNumber" :lot-number="lotNumber" />
 </template>
 
 <script>

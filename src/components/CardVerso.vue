@@ -1,8 +1,5 @@
 <template>
-  <section
-    :data-background-image="backgroundImageUrl"
-    data-background-size="cover"
-  >
+  <section :data-background-image="backgroundImageUrl" data-background-size="cover">
     <div class="card-number verso">
       <p>{{ cardNumber }}</p>
     </div>
@@ -53,12 +50,14 @@ export default {
 }
 
 .content {
+  --padding-value: 10vw;
+
   height: 100%;
-  width: calc(100%-4vh);
+  width: calc(100% - calc(2 * var(--padding-value)));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-inline: 2vh;
+  padding-inline: var(--padding-value);
 }
 
 .lot {

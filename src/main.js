@@ -1,25 +1,25 @@
-// import { createApp } from 'vue'
-// import App from './App.vue'
-
-// createApp(App).mount('#app')
-
 import App from "./App.vue";
-import {createApp} from "vue";
-import {createI18n} from "vue-i18n";
-import de from "@/locales/de";
-import en from "@/locales/en";
-import fr from "@/locales/fr";
+import { createApp } from "vue";
+import { createI18n } from "vue-i18n";
+import en from "@/locales/en.json";
+import fr from "@/locales/fr.json";
+import ar from "@/locales/ar.json";
+import br from "@/locales/br.json";
+import co2SubscriptDirective from "@/directives/co2SubscriptDirective.js"; // Import the directive
 
 const messages = {
   en: en,
   fr: fr,
-  de: de,
+  ar: ar,
+  br: br,
 };
 
 const i18n = createI18n({
-  locale: "en", // Set the initial locale, e.g., 'en'
-  fallbackLocale: "en",
+  locale: "ar", // Set the initial locale, e.g., 'en'
+  fallbackLocale: "fr",
   messages,
 });
 
-createApp(App).use(i18n).mount("#app");
+const app = createApp(App).use(i18n);
+app.directive('co2-subscript', co2SubscriptDirective); // Register the directive
+app.mount("#app");
